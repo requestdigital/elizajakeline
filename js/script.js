@@ -12,5 +12,4 @@ function reveal() {
     }
 }
 
-// Ativar o primeiro reveal se já estiver na tela
 reveal();
