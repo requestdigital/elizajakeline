@@ -1,0 +1,427 @@
+:root {
+    --gold: #d4af37;
+    --dark: #000000;
+    --deep-gray: #111111; /* Para leve contraste com o fundo */
+    --light: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--dark); /* Fundo agora é preto */
+    color: var(--light);    /* Texto base é branco */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Nav Luxo Dark */
+.main-nav {
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.85); /* Nav escura com transparência */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Linha dourada sutil */
+}
+
+.nav-logo {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 1.4rem;
+    color: var(--gold); /* Logo em dourado */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light);
+    margin-left: 30px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero Split */
+.hero-split {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--dark);
+}
+
+.hero-image {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    min-width: 50%;
+    filter: brightness(0.8) contrast(1.1); /* Look mais fashion/dramático */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 10%;
+    min-width: 50%;
+    background: var(--dark);
+}
+
+.hero-text h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin: 20px 0;
+    color: var(--light);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Story Sections */
+.story-section {
+    padding: 120px 8%;
+    background: var(--dark);
+}
+
+/* Brasil Section com fundo levemente diferente para separar */
+#about {
+    background: var(--deep-gray);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.reverse { direction: rtl; }
+.reverse .story-content { direction: ltr; }
+
+.story-img-wrapper {
+    border: 1px solid var(--gold); /* Moldura dourada fina nas fotos de história */
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.story-img-wrapper img {
+    width: 100%;
+    display: block;
+    filter: grayscale(30%);
+}
+
+.section-tag {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: var(--gold);
+}
+
+.story-content h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.story-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Grid Instagram */
+.portfolio-grid { 
+    padding: 100px 5%; 
+    background: var(--dark); 
+}
+
+.insta-header h2 {
+    font-family: 'Bodoni Moda', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--gold);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.grid-item {
+    background: var(--deep-gray);
+    border: 1px solid #222;
+    transition: transform 0.4s ease;
+    height: 732px;
+
+}
+
+.grid-item:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.grid-item iframe {
+    width: 100%;
+    height: 730px;
+    border: none;
+}
+
+/* Footer High-End */
+.luxury-footer {
+    background-color: var(--dark);
+    padding: 120px 8% 40px;
+    border-top: 1px solid rgba(212, 175, 55, 0.3); /* Linha dourada sutil no topo */
+    color: var(--light);
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+}
+
+.footer-logo {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3.5rem;
+    letter-spacing: 12px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--text-muted);
+}
+
+.footer-grid-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 60px 0;
+}
+
+.footer-col h4 {
+    font-family: 'Bodoni Moda', serif;
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.footer-col p, .footer-link {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-socials a {
+    display: block;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover, .footer-link:hover {
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.developer-credit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo-dev {
+    height: 35px; /* Ajuste a altura conforme o formato do seu logo */
+    width: auto;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+    /* Opcional: Filtro para deixar o logo levemente dourado/branco ao passar o mouse */
+    filter: grayscale(1) brightness(1.5); 
+}
+
+.footer-logo-dev:hover {
+    opacity: 1;
+    filter: grayscale(0) brightness(1.2);
+    transform: scale(1.05);
+}
+
+/* Ajuste mobile para o logo não ficar apertado */
+@media (max-width: 768px) {
+    .footer-logo-dev {
+        height: 50px;
+    }
+}
+
+/* Ajuste Mobile para o Footer */
+@media (max-width: 768px) {
+    .footer-logo { font-size: 2rem; letter-spacing: 5px; }
+    .footer-grid-info {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    .luxury-footer { padding-top: 80px; }
+}
+
+.cta-line {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 35px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.cta-line:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+/* Mobile Adjustments CORRIGIDO */
+@media (max-width: 768px) {
+    .main-nav { 
+        padding: 15px 20px; 
+    }
+    
+    .hero-split { 
+        height: auto; 
+        display: flex; 
+        flex-direction: column; /* Força um embaixo do outro */
+    }
+
+    .hero-image { 
+        height: 60vh; /* Define uma altura clara para a foto aparecer no celular */
+        width: 100%; 
+        min-height: 400px; /* Garante que não fique pequena demais */
+        order: 1; /* Garante que a foto venha primeiro (opcional) */
+    }
+
+    .hero-text { 
+        width: 100%; 
+        padding: 40px 20px; 
+        text-align: center; 
+        order: 2; 
+    }
+
+    .hero-text h1 { 
+        font-size: 2.5rem; /* Ajuste para não quebrar o layout */
+    }
+
+    .story-grid { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
+
+    .section-tag { 
+        font-size: 2.2rem; 
+    }
+
+    .nav-links { 
+        display: none; 
+    }
+
+    /* Ajuste para o Grid de Instagram no Mobile */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-item {
+        height: auto; /* Deixa o conteúdo definir a altura */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr; /* Uma coluna só */
+        text-align: center;
+    }
+
+    .story-img-wrapper {
+        margin: 0 auto; /* Centraliza a moldura da foto */
+        max-width: 90%; /* Garante que não estoure a tela */
+    }
+
+    /* Remove o efeito de inversão no mobile para não bagunçar a ordem centralizada */
+    .reverse { 
+        display: flex;
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav { padding: 15px; justify-content: center; }
+    .nav-links { display: none; }
+    
+    .hero-split { flex-direction: column; height: auto; }
+    .hero-image { height: 60vh; min-height: 400px; width: 100%; }
+    .hero-text { padding: 60px 20px; }
+    .hero-text h1 { font-size: 2.8rem; }
+
+    .story-grid { grid-template-columns: 1fr; gap: 40px; }
+    .reverse { display: flex; flex-direction: column; } /* Força ordem no mobile */
+    
+    .footer-grid-info { grid-template-columns: 1fr; gap: 30px; }
+    .footer-logo { font-size: 1.8rem; }
+}
